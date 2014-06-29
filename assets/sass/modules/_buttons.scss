@@ -1,0 +1,19 @@
+@mixin button {
+	padding-bottom: 5px;
+	font-size: .9em;
+	font-weight: $bold;
+	color: $navy;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border-bottom: 2px solid $navy;
+}
+
+@mixin appstore {
+	width: 130px;
+	height: 45px;
+	display: block;
+	border: 0;
+	background: url("../img/appstore.png") no-repeat;
+	@include hide-text;
+}

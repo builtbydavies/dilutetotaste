@@ -1,0 +1,223 @@
+// Global
+
+body {
+	font-family: $base-font-family;
+	line-height: $base-line-height;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+}
+
+// Header
+
+#header {
+	height: 240px;
+	h1 {
+		margin-left: -64px;
+		padding: 20px 0;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		a {
+			width: 128px;
+			height: 147px;
+			display: block;
+			background: url("../img/logo.png") no-repeat;
+			@include hide-text;
+		}
+	}
+	div {
+		width: 50%;
+		@include box-sizing(border-box);
+		&.menu-header-left-container {
+			padding-right: 100px;
+			float: left;
+			ul {
+				float: right;
+			}
+		}
+		&.menu-header-right-container {
+			padding-left: 100px;
+			float: right;
+		}
+		ul {
+			@include plain-list;
+			li {
+				margin: 0 15px;
+				&.current-menu-item a {
+					opacity: 1;
+				}
+				a {
+					@include button;
+					padding: 0;
+					line-height: 240px;
+					color: $white;
+					opacity: .1;
+					border: 0;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Banner
+
+#banner, #apps {
+	height: 540px;
+	.slide {
+		width: 100%;
+		height: 100%;
+		@include border-top-radius(10px);
+	}
+	.image {
+		margin-top: 46px;
+		margin-left: 50px;
+		width: 500px;
+		height: 494px;
+		float: left;
+	}
+	.copy {
+		margin-top: 170px;
+		margin-right: 80px;
+		width: 350px;
+		float: right;
+		h1 {
+			color: $pink;
+		}
+		p {
+			margin-bottom: 70px;
+			color: $navy;
+		}
+		a {
+			@include button;
+			&.appstore {
+				margin-top: -10px;
+				@include appstore;
+			}
+		}
+	}
+	.rock-quiz {
+		background: #dce9ee;
+		.image {
+			background: url("../img/rock_quiz_banner.png") no-repeat;
+		}
+	}
+	.football-quiz {
+		background: #00a6e5;
+		.image {
+			background: url("../img/football_quiz_banner.png") no-repeat;
+		}
+		h1 {
+			color: $white;
+		}
+	}
+}
+
+#apps .slide {
+	margin-bottom: 50px;
+	@include border-bottom-radius(10px);
+}
+
+// About
+
+#about {
+	padding-top: 70px;
+	padding-bottom: 40px;
+	background: $pink;
+	@include clearfix;
+	h1 {
+		margin: 0;
+		color: $white;
+		@include gs-span(b, 2, 3);
+	}
+	.copy {
+		@include gs-span(b, 4, 5);
+		p {
+			margin-top: 0;
+			margin-bottom: 50px;
+			color: $pink-copy;
+		}
+		a {
+			@include button;
+		}
+	}
+}
+
+// Questions
+
+#questions {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background: $blue;
+	@include clearfix;
+	@include border-bottom-radius(10px);
+	nav {
+		margin-bottom: 20px;
+		@include gs-span(b, 2, 5);
+		a {
+			margin-right: 50px;
+			width: 150px;
+			display: block;
+			float: left;
+			font-size: 2em;
+			font-weight: $bold;
+			color: $white;
+			text-decoration: none;
+			opacity: .1;
+			&.active, &:hover {
+				opacity: 1;
+			}
+		}
+	}
+	ol {
+		padding-left: 20px;
+		clear: both;
+		list-style-type: lower-alpha;
+		@include gs-span(b, 2, 5);
+		li {
+			margin-bottom: 5px;
+			font-style: italic;
+			color: $white;
+			span {
+				font-style: normal;
+				color: $blue-copy;
+			}
+		}
+	}
+}
+
+// Main
+
+#main {
+	padding: 100px 50px;
+	background: $white;
+	@include clearfix;
+	@include border-top-radius(10px);
+	@include border-bottom-radius(10px);
+	.content {
+		@include gs-span(b, 2, 5);
+		h1 {
+			margin-top: 0;
+			color: $pink;
+		}
+		p {
+			color: $navy;
+		}
+		a {
+			color: $blue-copy;
+		}
+	}
+}
+
+// Footer
+
+#footer {
+	padding: 50px 0px;
+	clear: both;
+	p {
+		text-align: center;
+		color: $white;
+	}
+}
