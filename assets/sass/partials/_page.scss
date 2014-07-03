@@ -1,6 +1,6 @@
-#page {
+.wrapper {
 	margin: 0 auto;
-	width: 1024px;
-	position: relative;
-	z-index: 1;
+	width: 768px;
+	clear: both;
+	@include clearfix;
 }

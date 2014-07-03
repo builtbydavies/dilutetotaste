@@ -354,253 +354,248 @@ td,
 th {
   padding: 0; }
 
-#page {
+p, #questions ol li, #main ul {
+  font-family: Georgia, Times, serif;
+  color: #717171; }
+
+.wrapper, #main {
   margin: 0 auto;
-  width: 1024px;
-  position: relative;
-  z-index: 1; }
-
-body {
-  background: #0b0b15; }
-
-.block {
-  width: 100%;
-  height: 400px;
-  position: absolute;
-  top: 0;
-  z-index: 0;
-  background: #262261; }
+  width: 768px;
+  clear: both; }
+  .wrapper:after, #main:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 body {
   font-family: sans-serif;
   line-height: 1.4;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400; }
 
 #header {
-  height: 240px; }
+  height: 130px;
+  position: relative;
+  z-index: 5;
+  background: white;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5); }
   #header h1 {
-    margin-left: -64px;
-    padding: 20px 0;
-    position: absolute;
-    top: 0;
-    left: 50%; }
+    margin: 0; }
     #header h1 a {
-      width: 128px;
-      height: 147px;
+      margin-left: -40px;
+      width: 79px;
+      height: 93px;
       display: block;
+      position: absolute;
+      top: 18px;
+      left: 50%;
       background: url("../img/logo.png") no-repeat;
-      font: 0/0 a;
-      color: transparent;
-      text-shadow: none; }
-  #header div {
-    width: 50%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    #header div.menu-header-left-container {
-      padding-right: 100px;
-      float: left; }
-      #header div.menu-header-left-container ul {
-        float: right; }
-    #header div.menu-header-right-container {
-      padding-left: 100px;
-      float: right; }
-    #header div ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none; }
-      #header div ul li {
-        float: left; }
-      #header div ul li {
-        margin: 0 15px; }
-        #header div ul li.current-menu-item a {
-          opacity: 1; }
-        #header div ul li a {
-          padding-bottom: 5px;
-          font-size: .9em;
-          font-weight: 600;
-          color: #0b0b15;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          text-decoration: none;
-          border-bottom: 2px solid #0b0b15;
-          padding: 0;
-          line-height: 240px;
-          color: white;
-          opacity: .1;
-          border: 0; }
-          #header div ul li a:hover {
-            opacity: 1; }
-
-#banner, #apps {
-  height: 540px; }
-  #banner .slide, #apps .slide {
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px; }
-  #banner .image, #apps .image {
-    margin-top: 46px;
-    margin-left: 50px;
-    width: 500px;
-    height: 494px;
-    float: left; }
-  #banner .copy, #apps .copy {
-    margin-top: 170px;
-    margin-right: 80px;
-    width: 350px;
-    float: right; }
-    #banner .copy h1, #apps .copy h1 {
-      color: #913f8b; }
-    #banner .copy p, #apps .copy p {
-      margin-bottom: 70px;
-      color: #0b0b15; }
-    #banner .copy a, #apps .copy a {
-      padding-bottom: 5px;
-      font-size: .9em;
-      font-weight: 600;
-      color: #0b0b15;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-decoration: none;
-      border-bottom: 2px solid #0b0b15; }
-      #banner .copy a.appstore, #apps .copy a.appstore {
-        margin-top: -10px;
-        width: 130px;
-        height: 45px;
+      overflow: hidden; }
+      #header h1 a:before {
+        content: "";
         display: block;
-        border: 0;
-        background: url("../img/appstore.png") no-repeat;
-        font: 0/0 a;
-        color: transparent;
-        text-shadow: none; }
-  #banner .rock-quiz, #apps .rock-quiz {
-    background: #dce9ee; }
-    #banner .rock-quiz .image, #apps .rock-quiz .image {
-      background: url("../img/rock_quiz_banner.png") no-repeat; }
-  #banner .football-quiz, #apps .football-quiz {
-    background: #00a6e5; }
-    #banner .football-quiz .image, #apps .football-quiz .image {
-      background: url("../img/football_quiz_banner.png") no-repeat; }
-    #banner .football-quiz h1, #apps .football-quiz h1 {
-      color: white; }
+        width: 0;
+        height: 100%; }
+  #header .menu-header-left-container {
+    width: 42%;
+    float: left; }
+    #header .menu-header-left-container ul {
+      float: right; }
+  #header .menu-header-right-container {
+    width: 42%;
+    float: right; }
+  #header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    #header ul li {
+      float: left; }
+    #header ul li {
+      margin: 0 20px; }
+      #header ul li.current-menu-item a {
+        font-weight: bold;
+        opacity: 1; }
+      #header ul li a {
+        line-height: 130px;
+        color: black;
+        opacity: .4;
+        text-decoration: none; }
 
-#apps .slide {
-  margin-bottom: 50px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; }
+#banner {
+  margin-bottom: 80px;
+  height: 770px;
+  position: relative; }
+  #banner nav p, #banner nav #questions ol li, #questions ol #banner nav li, #banner nav #main ul, #main #banner nav ul {
+    width: 68px;
+    height: 126px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 27%;
+    z-index: 10;
+    background: url("../img/controls.png") no-repeat;
+    overflow: hidden; }
+    #banner nav p:before, #banner nav #questions ol li:before, #questions ol #banner nav li:before, #banner nav #main ul:before, #main #banner nav ul:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%; }
+    #banner nav p.prev, #banner nav #questions ol li.prev, #questions ol #banner nav li.prev, #banner nav #main ul.prev, #main #banner nav ul.prev {
+      left: 0;
+      background-position: 0 0; }
+      #banner nav p.prev:hover, #banner nav #questions ol li.prev:hover, #questions ol #banner nav li.prev:hover, #banner nav #main ul.prev:hover, #main #banner nav ul.prev:hover {
+        background-position: 0 -126px; }
+    #banner nav p.next, #banner nav #questions ol li.next, #questions ol #banner nav li.next, #banner nav #main ul.next, #main #banner nav ul.next {
+      right: 0;
+      background-position: -68px 0; }
+      #banner nav p.next:hover, #banner nav #questions ol li.next:hover, #questions ol #banner nav li.next:hover, #banner nav #main ul.next:hover, #main #banner nav ul.next:hover {
+        background-position: -68px -126px; }
+  #banner .slides {
+    height: 100%; }
+  #banner .slide {
+    width: 100%;
+    height: 100%; }
+    #banner .slide.rock-quiz {
+      background: #1b3241;
+      box-shadow: inset 0 -200px 0 #3b84a8; }
+      #banner .slide.rock-quiz .copy h1 {
+        background: url("../img/rock_quiz.png") no-repeat; }
+    #banner .slide.football-quiz {
+      background: #80c02b;
+      box-shadow: inset 0 -200px 0 #266830; }
+      #banner .slide.football-quiz .copy h1 {
+        margin-left: 55px;
+        background: url("../img/football_quiz.png") no-repeat; }
+    #banner .slide .images {
+      width: 275px;
+      position: absolute;
+      top: 90px;
+      left: 0; }
+      #banner .slide .images ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none; }
+        #banner .slide .images ul li {
+          float: left; }
+    #banner .slide .copy {
+      width: 370px;
+      position: absolute;
+      top: 100px;
+      right: 0; }
+      #banner .slide .copy h1 {
+        margin: 0 0 50px 0;
+        height: 259px;
+        display: block;
+        overflow: hidden; }
+        #banner .slide .copy h1:before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 100%; }
+      #banner .slide .copy p, #banner .slide .copy #questions ol li, #questions ol #banner .slide .copy li, #banner .slide .copy #main ul, #main #banner .slide .copy ul {
+        margin: 0 0 115px 0;
+        clear: both;
+        text-align: center;
+        font-family: sans-serif;
+        color: white;
+        opacity: .8; }
+      #banner .slide .copy a {
+        margin: 0 auto;
+        width: 271px;
+        height: 91px;
+        display: block;
+        background: url("../img/appstore.png") no-repeat;
+        overflow: hidden; }
+        #banner .slide .copy a:before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 100%; }
+    #banner .slide .wrapper, #banner .slide #main {
+      position: relative; }
 
 #about {
-  padding-top: 70px;
-  padding-bottom: 40px;
-  background: #913f8b; }
-  #about:after {
-    content: "";
-    display: table;
-    clear: both; }
+  margin-bottom: 70px;
+  padding: 160px 50px 50px 50px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  background: url("../img/logo_big.png") no-repeat top center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   #about h1 {
-    margin: 0;
-    color: white;
-    display: block;
-    float: left;
-    margin-left: 17%;
-    margin-right: -100%;
-    width: 32%; }
-  #about .copy {
-    display: block;
-    float: left;
-    margin-left: 51%;
-    margin-right: -100%;
-    width: 32%; }
-    #about .copy p {
-      margin-top: 0;
-      margin-bottom: 50px;
-      color: #d297ce; }
-    #about .copy a {
-      padding-bottom: 5px;
-      font-size: .9em;
-      font-weight: 600;
-      color: #0b0b15;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-decoration: none;
-      border-bottom: 2px solid #0b0b15; }
+    font-size: 30px; }
 
-#questions {
-  padding-top: 70px;
-  padding-bottom: 70px;
-  background: #262261;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; }
-  #questions:after {
-    content: "";
-    display: table;
-    clear: both; }
-  #questions nav {
-    margin-bottom: 20px;
-    display: block;
-    float: left;
-    margin-left: 17%;
-    margin-right: -100%;
-    width: 66%; }
-    #questions nav a {
-      margin-right: 50px;
-      width: 150px;
-      display: block;
-      float: left;
-      font-size: 2em;
-      font-weight: 600;
-      color: white;
-      text-decoration: none;
-      opacity: .1; }
-      #questions nav a.active, #questions nav a:hover {
-        opacity: 1; }
-  #questions ol {
-    padding-left: 20px;
-    clear: both;
-    list-style-type: lower-alpha;
-    display: block;
-    float: left;
-    margin-left: 17%;
-    margin-right: -100%;
-    width: 66%; }
-    #questions ol li {
-      margin-bottom: 5px;
-      font-style: italic;
-      color: white; }
-      #questions ol li span {
-        font-style: normal;
-        color: #5f58c4; }
+#questions nav {
+  margin-bottom: 30px;
+  text-align: center; }
+  #questions nav a {
+    margin: 0 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    opacity: .3; }
+    #questions nav a.active {
+      opacity: 1; }
+#questions ol {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  #questions ol li {
+    float: left; }
+  #questions ol li {
+    width: 100%;
+    text-align: center; }
 
 #main {
-  padding: 100px 50px;
-  background: white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; }
-  #main:after {
-    content: "";
-    display: table;
-    clear: both; }
-  #main .content {
-    display: block;
-    float: left;
-    margin-left: 17%;
-    margin-right: -100%;
-    width: 66%; }
-    #main .content h1 {
-      margin-top: 0;
-      color: #913f8b; }
-    #main .content p {
-      color: #0b0b15; }
-    #main .content a {
-      color: #5f58c4; }
+  padding: 50px 0; }
+  #main a {
+    color: black; }
 
-#footer {
-  padding: 50px 0px;
-  clear: both; }
-  #footer p {
+#apps .app {
+  padding: 60px 30px 360px 30px; }
+  #apps .app h1 {
+    margin: 0 auto 30px auto;
+    height: 259px;
+    display: block;
+    overflow: hidden; }
+    #apps .app h1:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%; }
+  #apps .app p, #apps .app #questions ol li, #questions ol #apps .app li, #apps .app #main ul, #main #apps .app ul {
+    margin: 0 auto;
+    width: 600px;
     text-align: center;
     color: white; }
+  #apps .app a {
+    margin: 30px auto 0 auto;
+    width: 271px;
+    height: 91px;
+    display: block;
+    background: url("../img/appstore.png") no-repeat;
+    overflow: hidden; }
+    #apps .app a:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%; }
+#apps .rock-quiz {
+  background: #1b3241 url("../img/rock_quiz_screen_group.png") no-repeat bottom center; }
+  #apps .rock-quiz h1 {
+    width: 370px;
+    background: url("../img/rock_quiz.png") no-repeat; }
+#apps .football-quiz {
+  background: #80c02b url("../img/football_quiz_screen_group.png") no-repeat bottom center; }
+  #apps .football-quiz h1 {
+    width: 251px;
+    background: url("../img/football_quiz.png") no-repeat; }
+
+#footer {
+  padding: 30px 0;
+  text-align: center;
+  opacity: .5; }

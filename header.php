@@ -46,12 +46,10 @@
 
 <body <?php body_class(); ?>>
 
-<div class="block"></div>
-
-<main id="page" class="wrapper">
-
 <header id="header">
-	<?php wp_nav_menu( array( 'theme_location' => 'header-menu-left' ) ); ?>
-	<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-	<?php wp_nav_menu( array( 'theme_location' => 'header-menu-right' ) ); ?>
+	<div class="wrapper">
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu-left' ) ); ?>
+		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu-right' ) ); ?>
+	</div>
 </header>

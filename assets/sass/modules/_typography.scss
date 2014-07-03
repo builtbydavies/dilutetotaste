@@ -1,3 +1,16 @@
+// Weights
+
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Styles
+
+p {
+	font-family: Georgia, Times, serif;
+	color: #717171;
+}
+
 @mixin hide-text {
     font: 0/0 a;
     color: transparent;

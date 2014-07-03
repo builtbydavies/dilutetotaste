@@ -10,53 +10,49 @@ body {
 // Header
 
 #header {
-	height: 240px;
+	height: 130px;
+	position: relative;
+	z-index: 5;
+	background: $white;
+	box-shadow: 1px 0px 5px rgba(0,0,0,.5);
 	h1 {
-		margin-left: -64px;
-		padding: 20px 0;
-		position: absolute;
-		top: 0;
-		left: 50%;
+		margin: 0;
 		a {
-			width: 128px;
-			height: 147px;
+			margin-left: -40px;
+			width: 79px;
+			height: 93px;
 			display: block;
+			position: absolute;
+			top: 18px;
+			left: 50%;
 			background: url("../img/logo.png") no-repeat;
 			@include hide-text;
 		}
 	}
-	div {
-		width: 50%;
-		@include box-sizing(border-box);
-		&.menu-header-left-container {
-			padding-right: 100px;
-			float: left;
-			ul {
-				float: right;
-			}
-		}
-		&.menu-header-right-container {
-			padding-left: 100px;
+	.menu-header-left-container {
+		width: 42%;
+		float: left;
+		ul {
 			float: right;
 		}
-		ul {
-			@include plain-list;
-			li {
-				margin: 0 15px;
-				&.current-menu-item a {
-					opacity: 1;
-				}
-				a {
-					@include button;
-					padding: 0;
-					line-height: 240px;
-					color: $white;
-					opacity: .1;
-					border: 0;
-					&:hover {
-						opacity: 1;
-					}
-				}
+	}
+	.menu-header-right-container {
+		width: 42%;
+		float: right;
+	}
+	ul {
+		@include plain-list;
+		li {
+			margin: 0 20px;
+			&.current-menu-item a {
+				font-weight: bold;
+				opacity: 1;
+			}
+			a {
+				line-height: 130px;
+				color: $black;
+				opacity: .4;
+				text-decoration: none;
 			}
 		}
 	}
@@ -64,126 +60,145 @@ body {
 
 // Banner
 
-#banner, #apps {
-	height: 540px;
-	.slide {
-		width: 100%;
-		height: 100%;
-		@include border-top-radius(10px);
-	}
-	.image {
-		margin-top: 46px;
-		margin-left: 50px;
-		width: 500px;
-		height: 494px;
-		float: left;
-	}
-	.copy {
-		margin-top: 170px;
-		margin-right: 80px;
-		width: 350px;
-		float: right;
-		h1 {
-			color: $pink;
-		}
+#banner {
+	margin-bottom: 80px;
+	height: 770px;
+	position: relative;
+	nav {
 		p {
-			margin-bottom: 70px;
-			color: $navy;
-		}
-		a {
-			@include button;
-			&.appstore {
-				margin-top: -10px;
-				@include appstore;
+			width: 68px;
+			height: 126px;
+			display: block;
+			cursor: pointer;
+			position: absolute;
+			top: 27%;
+			z-index: 10;
+			background: url("../img/controls.png") no-repeat;
+			@include hide-text;
+			&.prev {
+				left: 0;
+				background-position: 0 0;
+				&:hover {
+					background-position: 0 -126px;
+				}
+			}
+			&.next {
+				right: 0;
+				background-position: -68px 0;
+				&:hover {
+					background-position: -68px -126px;
+				}
 			}
 		}
 	}
-	.rock-quiz {
-		background: #dce9ee;
-		.image {
-			background: url("../img/rock_quiz_banner.png") no-repeat;
-		}
+	.slides {
+		height: 100%;
 	}
-	.football-quiz {
-		background: #00a6e5;
-		.image {
-			background: url("../img/football_quiz_banner.png") no-repeat;
+	.slide {
+		width: 100%;
+		height: 100%;
+		&.rock-quiz {
+			background: #1b3241;
+			box-shadow: inset 0 -200px 0 #3b84a8;
+			.copy {
+				h1 {
+					background: url("../img/rock_quiz.png") no-repeat;
+				}
+			}
 		}
-		h1 {
-			color: $white;
+		&.football-quiz {
+			background: #80c02b;
+			box-shadow: inset 0 -200px 0 #266830;
+			.copy {
+				h1 {
+					margin-left: 55px;
+					background: url("../img/football_quiz.png") no-repeat;
+				}
+			}
+		}
+		.images {
+			width: 275px;
+			position: absolute;
+			top: 90px;
+			left: 0;
+			ul {
+				@include plain-list;
+			}
+		}
+		.copy {
+			width: 370px;
+			position: absolute;
+			top: 100px;
+			right: 0;
+			h1 {
+				margin: 0 0 50px 0;
+				height: 259px;
+				display: block;
+				@include hide-text;
+			}
+			p {
+				margin: 0 0 115px 0;
+				clear: both;
+				text-align: center;
+				font-family: $base-font-family;
+				color: $white;
+				opacity: .8;
+			}
+			a {
+				margin: 0 auto;
+				width: 271px;
+				height: 91px;
+				display: block;
+				background: url("../img/appstore.png") no-repeat;
+				@include hide-text;
+			}
+		}
+		.wrapper {
+			position: relative;
 		}
 	}
 }
 
-#apps .slide {
-	margin-bottom: 50px;
-	@include border-bottom-radius(10px);
-}
-
-// About
+// About 
 
 #about {
-	padding-top: 70px;
-	padding-bottom: 40px;
-	background: $pink;
-	@include clearfix;
+	margin-bottom: 70px;
+	padding: 160px 50px 50px 50px;
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+	background: url("../img/logo_big.png") no-repeat top center;
+	@include box-sizing(border-box);
 	h1 {
-		margin: 0;
-		color: $white;
-		@include gs-span(b, 2, 3);
-	}
-	.copy {
-		@include gs-span(b, 4, 5);
-		p {
-			margin-top: 0;
-			margin-bottom: 50px;
-			color: $pink-copy;
-		}
-		a {
-			@include button;
-		}
+		font-size: 30px;
 	}
 }
 
 // Questions
 
 #questions {
-	padding-top: 70px;
-	padding-bottom: 70px;
-	background: $blue;
-	@include clearfix;
-	@include border-bottom-radius(10px);
 	nav {
-		margin-bottom: 20px;
-		@include gs-span(b, 2, 5);
+		margin-bottom: 30px;
+		text-align: center;
 		a {
-			margin-right: 50px;
-			width: 150px;
-			display: block;
-			float: left;
-			font-size: 2em;
+			margin: 0 20px;
+			font-size: 24px;
 			font-weight: $bold;
-			color: $white;
+			color: $black;
 			text-decoration: none;
-			opacity: .1;
-			&.active, &:hover {
+			opacity: .3;
+			&.active {
 				opacity: 1;
 			}
 		}
 	}
 	ol {
-		padding-left: 20px;
-		clear: both;
-		list-style-type: lower-alpha;
-		@include gs-span(b, 2, 5);
+		width: 100%;
+		text-align: center;
+		@include plain-list;
 		li {
-			margin-bottom: 5px;
-			font-style: italic;
-			color: $white;
-			span {
-				font-style: normal;
-				color: $blue-copy;
-			}
+			width: 100%;
+			text-align: center;
+			@extend p;
 		}
 	}
 }
@@ -191,22 +206,54 @@ body {
 // Main
 
 #main {
-	padding: 100px 50px;
-	background: $white;
-	@include clearfix;
-	@include border-top-radius(10px);
-	@include border-bottom-radius(10px);
-	.content {
-		@include gs-span(b, 2, 5);
+	padding: 50px 0;
+	@extend .wrapper;
+	ul {
+		@extend p;
+	}
+	a {
+		color: $black;
+	}
+}
+
+// Apps
+
+#apps {
+	.app {
+		padding: 60px 30px 360px 30px;
 		h1 {
-			margin-top: 0;
-			color: $pink;
+			margin: 0 auto 30px auto;
+			height: 259px;
+			display: block;
+			@include hide-text;
 		}
 		p {
-			color: $navy;
+			margin: 0 auto;
+			width: 600px;
+			text-align: center;
+			color: $white;
 		}
 		a {
-			color: $blue-copy;
+			margin: 30px auto 0 auto;
+			width: 271px;
+			height: 91px;
+			display: block;
+			background: url("../img/appstore.png") no-repeat;
+			@include hide-text;
+		}
+	}
+	.rock-quiz {
+		background: #1b3241 url("../img/rock_quiz_screen_group.png") no-repeat bottom center;
+		h1 {
+			width: 370px;
+			background: url("../img/rock_quiz.png") no-repeat;
+		}
+	}
+	.football-quiz {
+		background: #80c02b url("../img/football_quiz_screen_group.png") no-repeat bottom center;
+		h1 {
+			width: 251px;
+			background: url("../img/football_quiz.png") no-repeat;
 		}
 	}
 }
@@ -214,10 +261,7 @@ body {
 // Footer
 
 #footer {
-	padding: 50px 0px;
-	clear: both;
-	p {
-		text-align: center;
-		color: $white;
-	}
+	padding: 30px 0;
+	text-align: center;
+	opacity: .5;
 }

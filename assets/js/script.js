@@ -1,8 +1,19 @@
 $( document ).ready(function() {
     
-    $('#banner').cycle({ 
+    $('#banner .slides').cycle({ 
 	    fx: 'fade',
-	    speed: 'fast'
+	    speed: 'fast',
+	    timeout: 5000, 
+	    pause: true,
+	    next: '.next',
+	    prev: '.prev'
+	});
+	
+	$('#banner .images ul').cycle({ 
+	    fx: 'fade', 
+	    speed: 'fast',
+	    timeout: 1000,
+	    pause: true
 	});
 	
 	$('#questions ol').hide();

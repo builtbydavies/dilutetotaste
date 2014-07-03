@@ -1,20 +1,16 @@
-// Base
-
-@import "partials/base";
-
 // Vendor
-
 @import "vendor/normalize";
 
 // Modules
-
 @import "modules/grids";
 @import "modules/color";
 @import "modules/typography";
 @import "modules/buttons";
 
-// Partials
+// Base
+@import "partials/base";
 
+// Partials
 @import "partials/page";
 @import "partials/backgrounds";
 @import "partials/styles";
