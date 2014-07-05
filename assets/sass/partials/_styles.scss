@@ -97,25 +97,6 @@ body {
 	.slide {
 		width: 100%;
 		height: 100%;
-		&.rock-quiz {
-			background: #1b3241;
-			box-shadow: inset 0 -200px 0 #3b84a8;
-			.copy {
-				h1 {
-					background: url("../img/rock_quiz.png") no-repeat;
-				}
-			}
-		}
-		&.football-quiz {
-			background: #80c02b;
-			box-shadow: inset 0 -200px 0 #266830;
-			.copy {
-				h1 {
-					margin-left: 55px;
-					background: url("../img/football_quiz.png") no-repeat;
-				}
-			}
-		}
 		.images {
 			width: 275px;
 			position: absolute;
@@ -130,11 +111,8 @@ body {
 			position: absolute;
 			top: 100px;
 			right: 0;
-			h1 {
-				margin: 0 0 50px 0;
-				height: 259px;
-				display: block;
-				@include hide-text;
+			img {
+				margin: 0 0 40px 0;
 			}
 			p {
 				margin: 0 0 115px 0;
@@ -176,6 +154,8 @@ body {
 // Questions
 
 #questions {
+	margin-bottom: 80px;
+	@include clearfix;
 	nav {
 		margin-bottom: 30px;
 		text-align: center;
@@ -220,40 +200,32 @@ body {
 
 #apps {
 	.app {
-		padding: 60px 30px 360px 30px;
-		h1 {
-			margin: 0 auto 30px auto;
-			height: 259px;
-			display: block;
-			@include hide-text;
+		padding: 60px 30px 380px 30px;
+		position: relative;
+		.copy {
+			img {
+				margin-bottom: 30px;
+			}
+			p {
+				margin: 0 auto;
+				width: 600px;
+				text-align: center;
+				color: $white;
+			}
+			a {
+				margin: 30px auto 0 auto;
+				width: 271px;
+				height: 91px;
+				display: block;
+				background: url("../img/appstore.png") no-repeat;
+				@include hide-text;
+			}
 		}
-		p {
-			margin: 0 auto;
-			width: 600px;
-			text-align: center;
-			color: $white;
-		}
-		a {
-			margin: 30px auto 0 auto;
-			width: 271px;
-			height: 91px;
-			display: block;
-			background: url("../img/appstore.png") no-repeat;
-			@include hide-text;
-		}
-	}
-	.rock-quiz {
-		background: #1b3241 url("../img/rock_quiz_screen_group.png") no-repeat bottom center;
-		h1 {
-			width: 370px;
-			background: url("../img/rock_quiz.png") no-repeat;
-		}
-	}
-	.football-quiz {
-		background: #80c02b url("../img/football_quiz_screen_group.png") no-repeat bottom center;
-		h1 {
-			width: 251px;
-			background: url("../img/football_quiz.png") no-repeat;
+		.group {
+			margin-left: -345px;
+			position: absolute;
+			bottom: -6px;
+			left: 50%;
 		}
 	}
 }

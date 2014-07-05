@@ -455,17 +455,6 @@ body {
   #banner .slide {
     width: 100%;
     height: 100%; }
-    #banner .slide.rock-quiz {
-      background: #1b3241;
-      box-shadow: inset 0 -200px 0 #3b84a8; }
-      #banner .slide.rock-quiz .copy h1 {
-        background: url("../img/rock_quiz.png") no-repeat; }
-    #banner .slide.football-quiz {
-      background: #80c02b;
-      box-shadow: inset 0 -200px 0 #266830; }
-      #banner .slide.football-quiz .copy h1 {
-        margin-left: 55px;
-        background: url("../img/football_quiz.png") no-repeat; }
     #banner .slide .images {
       width: 275px;
       position: absolute;
@@ -482,16 +471,8 @@ body {
       position: absolute;
       top: 100px;
       right: 0; }
-      #banner .slide .copy h1 {
-        margin: 0 0 50px 0;
-        height: 259px;
-        display: block;
-        overflow: hidden; }
-        #banner .slide .copy h1:before {
-          content: "";
-          display: block;
-          width: 0;
-          height: 100%; }
+      #banner .slide .copy img {
+        margin: 0 0 40px 0; }
       #banner .slide .copy p, #banner .slide .copy #questions ol li, #questions ol #banner .slide .copy li, #banner .slide .copy #main ul, #main #banner .slide .copy ul {
         margin: 0 0 115px 0;
         clear: both;
@@ -526,29 +507,35 @@ body {
   #about h1 {
     font-size: 30px; }
 
-#questions nav {
-  margin-bottom: 30px;
-  text-align: center; }
-  #questions nav a {
-    margin: 0 20px;
-    font-size: 24px;
-    font-weight: 600;
-    color: black;
-    text-decoration: none;
-    opacity: .3; }
-    #questions nav a.active {
-      opacity: 1; }
-#questions ol {
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-  #questions ol li {
-    float: left; }
-  #questions ol li {
-    width: 100%;
+#questions {
+  margin-bottom: 80px; }
+  #questions:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #questions nav {
+    margin-bottom: 30px;
     text-align: center; }
+    #questions nav a {
+      margin: 0 20px;
+      font-size: 24px;
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+      opacity: .3; }
+      #questions nav a.active {
+        opacity: 1; }
+  #questions ol {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    #questions ol li {
+      float: left; }
+    #questions ol li {
+      width: 100%;
+      text-align: center; }
 
 #main {
   padding: 50px 0; }
@@ -556,44 +543,32 @@ body {
     color: black; }
 
 #apps .app {
-  padding: 60px 30px 360px 30px; }
-  #apps .app h1 {
-    margin: 0 auto 30px auto;
-    height: 259px;
-    display: block;
-    overflow: hidden; }
-    #apps .app h1:before {
-      content: "";
-      display: block;
-      width: 0;
-      height: 100%; }
-  #apps .app p, #apps .app #questions ol li, #questions ol #apps .app li, #apps .app #main ul, #main #apps .app ul {
+  padding: 60px 30px 380px 30px;
+  position: relative; }
+  #apps .app .copy img {
+    margin-bottom: 30px; }
+  #apps .app .copy p, #apps .app .copy #questions ol li, #questions ol #apps .app .copy li, #apps .app .copy #main ul, #main #apps .app .copy ul {
     margin: 0 auto;
     width: 600px;
     text-align: center;
     color: white; }
-  #apps .app a {
+  #apps .app .copy a {
     margin: 30px auto 0 auto;
     width: 271px;
     height: 91px;
     display: block;
     background: url("../img/appstore.png") no-repeat;
     overflow: hidden; }
-    #apps .app a:before {
+    #apps .app .copy a:before {
       content: "";
       display: block;
       width: 0;
       height: 100%; }
-#apps .rock-quiz {
-  background: #1b3241 url("../img/rock_quiz_screen_group.png") no-repeat bottom center; }
-  #apps .rock-quiz h1 {
-    width: 370px;
-    background: url("../img/rock_quiz.png") no-repeat; }
-#apps .football-quiz {
-  background: #80c02b url("../img/football_quiz_screen_group.png") no-repeat bottom center; }
-  #apps .football-quiz h1 {
-    width: 251px;
-    background: url("../img/football_quiz.png") no-repeat; }
+  #apps .app .group {
+    margin-left: -345px;
+    position: absolute;
+    bottom: -6px;
+    left: 50%; }
 
 #footer {
   padding: 30px 0;
